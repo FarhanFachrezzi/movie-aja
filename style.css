@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Oswald&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.brand-cont {
+  background-color: #b6072a;
+  position: relative;
+  top: -19px;
+}
+.navbar-brand h1 {
+  position: relative;
+  font-family: "Oswald", sans-serif;
+  font-size: 35px;
+  color: white;
+  font-weight: bold;
+  margin-left: 80px;
+  text-shadow: 2px 2px 2px rgb(65, 64, 64);
+  bottom: -23px;
+  left: -25px;
+}
+.navbar {
+  height: 65px;
+}
+.search {
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  height: 50px;
+  background-color: #dc143c !important;
+  color: white;
+  margin-left: 30px;
+  font-size: 26px;
+  position: relative;
+  top: -26px;
+}
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+.icon {
+  transform: scale(1.4);
+}
+
+.search-cont {
+  margin-left: 15px;
+}
+/* .cont-card {
+  margin-top: 100px;
+  display: flex;
+  background-color: #dc143c;
+  justify-content: center;
+}
+.col-card {
+  margin-right: 25px;
+} */
