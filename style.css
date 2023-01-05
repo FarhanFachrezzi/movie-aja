@@ -1,9 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
+/* html {
+  height: 1500px;
+} */
+.buttonSearch {
+  display: none;
+}
 .brand-cont {
   background-color: #b6072a;
   position: relative;
@@ -17,8 +26,8 @@
   font-weight: bold;
   margin-left: 80px;
   text-shadow: 2px 2px 2px rgb(65, 64, 64);
-  bottom: -23px;
-  left: -25px;
+  bottom: -20px;
+  left: -30px;
 }
 .navbar {
   height: 65px;
@@ -46,12 +55,166 @@
 .search-cont {
   margin-left: 15px;
 }
-/* .cont-card {
-  margin-top: 100px;
-  display: flex;
-  background-color: #dc143c;
+.cont-card {
+  margin-top: 50px;
+}
+.row {
   justify-content: center;
 }
-.col-card {
-  margin-right: 25px;
-} */
+.card {
+  width: 230px;
+  margin-right: 30px;
+  margin-top: 20px;
+  box-shadow: 8px 8px 10px rgb(37, 37, 37);
+}
+.card img {
+  height: 330px;
+}
+.rate {
+  background-color: #e0a306;
+  width: 55px;
+  position: relative;
+  top: -80px;
+  height: 55px;
+  right: -197px;
+  display: block;
+  text-align: center;
+  color: white;
+  border-radius: 50%;
+}
+.rate h5 {
+  line-height: 50px;
+}
+
+.judulCard {
+  color: rgb(253, 234, 234);
+  position: relative;
+  top: -40px;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+}
+.genre {
+  color: #808080;
+  position: relative;
+  top: -47px;
+}
+
+@media (max-width: 1198px) {
+  .card {
+    width: 200px;
+    margin-right: 30px;
+    margin-top: 20px;
+    box-shadow: 8px 8px 10px rgb(37, 37, 37);
+  }
+  .card img {
+    height: 280px;
+  }
+  .rate {
+    right: -175px;
+  }
+}
+@media (max-width: 992px) {
+  .card {
+    width: 270px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin: auto;
+  }
+  .rate {
+    margin: auto;
+    left: 134px;
+  }
+  .card img {
+    height: 400px;
+  }
+  .cont-card {
+    margin-top: 100px;
+  }
+  .judulCard {
+    color: rgb(253, 234, 234);
+    position: relative;
+    top: -40px;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    text-align: center;
+  }
+  .genre {
+    color: #808080;
+    position: relative;
+    top: -45px;
+    text-align: center;
+  }
+}
+@media (max-width: 648px) {
+  ::placeholder {
+    color: black;
+    opacity: 1;
+  }
+  .search {
+    margin-top: 40px;
+    text-align: center;
+    background-color: white !important;
+    height: 50px;
+    width: 350px;
+    color: black;
+    top: 10px;
+    border: 2px solid rgb(29, 28, 28);
+    margin-left: 0px;
+    left: 100px;
+  }
+
+  .search-cont {
+    padding: 0;
+  }
+  .icon {
+    display: none;
+  }
+  .cont-card {
+    margin-top: 170px;
+  }
+  .navbar {
+    background-color: #b6072a !important;
+    height: 70px;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  .brand-cont {
+    background-color: #b6072a;
+    position: relative;
+    top: -40px;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .navbar-brand h1 {
+    position: relative;
+    font-family: "Oswald", sans-serif;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    margin-left: 70px;
+    text-shadow: 2px 2px 2px rgb(65, 64, 64);
+    text-align: center;
+
+    bottom: -45px;
+  }
+}
+@media (max-width: 648px) {
+  .navbar-brand h1 {
+    position: relative;
+    font-family: "Oswald", sans-serif;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgb(65, 64, 64);
+    text-align: center;
+
+    bottom: -20px;
+  }
+  .brand-cont {
+    top: -10px;
+    /* left: -20px; */
+  }
+}
