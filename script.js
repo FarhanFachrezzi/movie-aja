@@ -19,26 +19,14 @@ document.addEventListener("click", async function (e) {
     modalBody.innerHTML = modalDesc;
   }
 });
+const row = document.querySelector(".movie-container");
 
 async function update() {
   const movies = await getmovies();
   let card = ``;
-  movies.forEach((el) => {
-    card += showCard(el);
-  });
-
-  const row = document.querySelector(".movie-container");
-  row.innerHTML = card;
-
-  const genre = document.querySelectorAll(".genre");
-  const rate = document.querySelectorAll(".rateLetter");
-  for (let i = 0; i < genre.length; i++) {
-    const id = genre[i].dataset.imdbid;
-    const api = await genrataApi(id);
-    genre[i].textContent = api.Genre;
-    for (let index = 0; index < rate.length; index++) {
-      rate[i].innerHTML = api.imdbRating;
-    }
+  for (let i = 0; i < movies.length; i++) {
+    card += await showCard(movies[i]);
+    row.innerHTML = card;
   }
 }
 
@@ -63,15 +51,24 @@ async function getApiDesc(id) {
   return datas;
 }
 
-function showAllCard() {}
-function showCard(el) {
+async function apigenre(el) {
+  const genRate = await genrataApi(el);
+  const genre = await genRate.Genre;
+  return genre;
+}
+async function rate(el) {
+  const genRate = await genrataApi(el);
+  const rate = await genRate.imdbRating;
+  return rate;
+}
+async function showCard(el) {
   return ` <div class="col-lg-3">
   <div class="card bg-transparent" >
     <img src="${el.Poster}" class="card-img-top" alt="..." />
   </div>
-  <span class="rate"><h5 class="rateLetter"></h5></span>
+  <span class="rate"><h5 class="rateLetter">${await rate(el.imdbID)}</h5></span>
   <h4 class="judulCard">${el.Title}</h4>
-  <p class="genre" data-imdbid=${el.imdbID}></p>
+  <p class="genre" data-imdbid=${el.imdbID}>${await apigenre(el.imdbID)}</p>
   <button class="buttonDetail"  data-imdbidmodal=${el.imdbID} data-bs-toggle="modal" data-bs-target="#exampleModal">read more</button>
 </div>`;
 }

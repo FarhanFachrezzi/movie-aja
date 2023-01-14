@@ -58,6 +58,10 @@
 .cont-card {
   margin-top: 50px;
 }
+.card-animation {
+  animation-name: animation;
+  animation-delay: 2s;
+}
 .row {
   justify-content: center;
 }
@@ -118,6 +122,15 @@
 .modal-body p {
   margin-bottom: 1rem;
 }
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* media query */
 @media (max-width: 1198px) {
   .card {
@@ -133,7 +146,14 @@
     right: -175px;
   }
 }
-
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (max-width: 991px) {
   .card {
     width: 270px;
