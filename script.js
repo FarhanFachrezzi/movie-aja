@@ -62,6 +62,8 @@ async function getApiDesc(id) {
   const datas = response.json();
   return datas;
 }
+
+function showAllCard() {}
 function showCard(el) {
   return ` <div class="col-lg-3">
   <div class="card bg-transparent" >
