@@ -1,5 +1,5 @@
 const input = document.querySelector(".search");
-
+const row = document.querySelector(".movie-container");
 console.log(input);
 input.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
@@ -19,15 +19,14 @@ document.addEventListener("click", async function (e) {
     modalBody.innerHTML = modalDesc;
   }
 });
-const row = document.querySelector(".movie-container");
 
 async function update() {
   const movies = await getmovies();
   let card = ``;
   for (let i = 0; i < movies.length; i++) {
     card += await showCard(movies[i]);
-    row.innerHTML = card;
   }
+  row.innerHTML = card;
 }
 
 async function getmovies() {
