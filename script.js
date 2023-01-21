@@ -37,7 +37,7 @@ async function getmovies() {
   return data;
 }
 
-async function genrataApi(id) {
+async function genrateApi(id) {
   const token = `http://www.omdbapi.com/?apikey=7df368ab&i=${id}`;
   const response = await fetch(token);
   const datas = response.json();
@@ -51,12 +51,12 @@ async function getApiDesc(id) {
 }
 
 async function apigenre(el) {
-  const genRate = await genrataApi(el);
+  const genRate = await genrateApi(el);
   const genre = await genRate.Genre;
   return genre;
 }
 async function rate(el) {
-  const genRate = await genrataApi(el);
+  const genRate = await genrateApi(el);
   const rate = await genRate.imdbRating;
   return rate;
 }
