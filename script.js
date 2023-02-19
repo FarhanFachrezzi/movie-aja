@@ -30,7 +30,7 @@ async function update() {
 }
 
 async function getmovies() {
-  const token = `http://www.omdbapi.com/?apikey=7df368ab&s=${input.value}`;
+  const token = `https://www.omdbapi.com/?apikey=7df368ab&s=${input.value}`;
   const response = await fetch(token);
   const datas = await response.json();
   const data = await datas.Search;
@@ -38,13 +38,13 @@ async function getmovies() {
 }
 
 async function genrateApi(id) {
-  const token = `http://www.omdbapi.com/?apikey=7df368ab&i=${id}`;
+  const token = `https://www.omdbapi.com/?apikey=7df368ab&i=${id}`;
   const response = await fetch(token);
   const datas = response.json();
   return datas;
 }
 async function getApiDesc(id) {
-  const token = `http://www.omdbapi.com/?apikey=7df368ab&i=${id}`;
+  const token = `https://www.omdbapi.com/?apikey=7df368ab&i=${id}`;
   const response = await fetch(token);
   const datas = response.json();
   return datas;

@@ -50,6 +50,7 @@
 }
 .icon {
   transform: scale(1.4);
+  color: white;
 }
 
 .search-cont {
